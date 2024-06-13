@@ -1,6 +1,6 @@
-import { Column, Entity, Index, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import MatriculaEntity from "./MatriculaEntity";
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import DepartamentoEntity from "./DepartamentosEntity";
+import MatriculaEntity from "./MatriculaEntity";
 
 @Entity("Alunos")
 export default class AlunoEntity {
@@ -21,13 +21,10 @@ export default class AlunoEntity {
     rg: string;
 
     @Column()
-    enderecoAtual: string;
+    endereco: string;
 
     @Column()
     telefone: string;
-
-    @Column()
-    enderecoPermanente: string;
 
     @Column()
     email: string;
@@ -37,7 +34,6 @@ export default class AlunoEntity {
 
     @Column()
     sexo: string;
-
 
     @ManyToOne(() => DepartamentoEntity, departamento => departamento.alunos)
     departamento: DepartamentoEntity;

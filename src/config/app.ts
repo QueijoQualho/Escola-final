@@ -1,12 +1,12 @@
 import express from "express";
 import "reflect-metadata";
-import { AppDataSource } from "./config/dataSource";
-import router from "./routes";
+import router from "../routes";
+import { AppDataSource } from "./dataSource";
+
 const app = express();
 
 app.use(express.json());
 
-app.use(router)
 
 AppDataSource.initialize()
   .then(() => {
@@ -15,5 +15,7 @@ AppDataSource.initialize()
   .catch((erro) => {
     console.log(erro);
   });
+  
+app.use('/api', router)
 
 export default app;
