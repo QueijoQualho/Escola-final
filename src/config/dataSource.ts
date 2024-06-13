@@ -6,6 +6,9 @@ import DisciplinaEntity from "../entity/DisciplinaEntity";
 import ProfessorEntity from "../entity/ProfessoresEntity";
 import GradeCurricularEntity from "../entity/GradeCurricularEntity";
 import MatriculaEntity from "../entity/MatriculaEntity";
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 export const AppDataSource = new DataSource({
     type: "mysql",
