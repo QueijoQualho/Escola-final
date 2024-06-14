@@ -1,5 +1,5 @@
 import app from "./config/app";
 
-app.listen(3000, () => {
-  console.log(`Servidor executando em http://localhost:${3000}`);
+app.listen(3001, () => {
+  console.log(`Servidor executando em http://localhost:${3001}`);
 });

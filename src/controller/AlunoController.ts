@@ -8,11 +8,12 @@ export class AlunoController {
 
     constructor() {
         const alunoRepository = AppDataSource.getRepository(AlunoEntity);
-        this.alunoService = new AlunoService(alunoRepository);    }
+        this.alunoService = new AlunoService(alunoRepository);
+    }
 
     async findAll(req: Request, res: Response): Promise<void> {
         try {
-            const alunos = await this.alunoService.getAllAlunos(); 
+            const alunos = await this.alunoService.getAllAlunos();
             res.json(alunos);
         } catch (error) {
             res.status(500).json({ message: error.message });
