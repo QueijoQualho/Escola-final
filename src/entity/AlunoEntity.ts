@@ -29,12 +29,6 @@ export default class AlunoEntity {
     @Column()
     email: string;
 
-    @Column({ type: "date", name: "data_nascimento" })
-    dataNascimento: Date;
-
-    @Column()
-    sexo: string;
-
     @ManyToOne(() => DepartamentoEntity, departamento => departamento.alunos)
     departamento: DepartamentoEntity;
 
