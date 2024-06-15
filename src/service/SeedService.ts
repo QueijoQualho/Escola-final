@@ -73,8 +73,8 @@ export class SeedService {
 
         // Seed Alunos
         const alunos: Partial<AlunoEntity>[] = [
-            { nome: 'João', numero: '123', cpf: '12345678900', rg: '12345', endereco: 'Rua A', telefone: '12345', email: 'joao@email.com', dataNascimento: new Date('2000-01-01'), sexo: 'M', departamento: savedDepartamentos[0] },
-            { nome: 'Maria', numero: '456', cpf: '98765432100', rg: '54321', endereco: 'Rua X', telefone: '54321', email: 'maria@email.com', dataNascimento: new Date('2000-02-01'), sexo: 'F', departamento: savedDepartamentos[0] }
+            { nome: 'João', numero: '123', cpf: '12345678900', rg: '12345', endereco: 'Rua A', telefone: '12345', email: 'joao@email.com', departamento: savedDepartamentos[0] },
+            { nome: 'Maria', numero: '456', cpf: '98765432100', rg: '54321', endereco: 'Rua X', telefone: '54321', email: 'maria@email.com', departamento: savedDepartamentos[0] }
         ];
         const savedAlunos = await this.alunoRepository.save(alunos);
 

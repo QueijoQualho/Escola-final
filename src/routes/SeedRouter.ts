@@ -4,7 +4,7 @@ import { SeedController } from "../controller/SeedController";
 const routerSeed = Router();
 const seedController = new SeedController();
 
-routerSeed.post('/', async (req, res) => {
+routerSeed.get('/', async (req, res) => {
     try {
         await seedController.seedDatabase(req, res);
         res.status(200).json({ message: 'Database seeded successfully' });
